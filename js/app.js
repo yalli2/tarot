@@ -31,11 +31,10 @@ function numLabel(c){
   return c.no===1?'A':c.no===11?'P':c.no===12?'N':c.no===13?'Q':c.no===14?'K':String(c.no);
 }
 function cardFace(c,o={}){
-  const rev=!!o.rev,cls=['tcard','suit-'+c.suit,o.size||'',rev?'is-rev':'',o.cls||''].join(' ');
+  const rev=!!o.rev,cls=['tcard','has-img','suit-'+c.suit,o.size||'',rev?'is-rev':'',o.cls||''].join(' ');
   return `<div class="${cls}" style="--sc:${SUITS[c.suit].color}" ${o.id?`data-id="${c.id}"`:''}>
-    <div class="tc-top"><span class="tc-num">${numLabel(c)}</span>${elSvg(c.suit,16)}</div>
-    <div class="tc-mid"><div class="tc-art">${elSvg(c.suit,o.size==='sm'?34:52)}</div></div>
-    <div class="tc-name">${esc(c.ko)}<small>${esc(c.en)}</small></div>
+    <img class="tc-img" src="img/cards/${c.id}.jpg" alt="${esc(c.ko)} (${esc(c.en)})${rev?' 역방향':''}" loading="lazy" decoding="async" draggable="false">
+    <div class="tc-cap"><span class="tc-num">${numLabel(c)}</span>${esc(c.ko)}</div>
     ${rev?'<span class="tc-badge">▼ 역방향</span>':''}
   </div>`;
 }

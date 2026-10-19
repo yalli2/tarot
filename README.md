@@ -28,3 +28,6 @@ GitHub Pages는 정적 호스팅이라 서버가 없습니다. 수강생끼리 �
 
 ## 이용 원칙
 성찰·코칭 도구입니다. 예측, 진단, 채용·평가 등 인사 결정의 근거로 사용하지 않습니다.
+
+## 카드 이미지 출처
+Pamela Colman Smith의 *Rider-Waite-Smith Tarot*(1909) — 퍼블릭 도메인. 스캔 이미지는 [steve-p.org](https://steve-p.org/cards/RWSa.html)에서 정리한 [mixvlad/TarotCards](https://github.com/mixvlad/TarotCards)를 사이트용(360×600)으로 줄여 사용했습니다. 교재(Sam Magdaleno)의 삽화는 사용하지 않았습니다.
