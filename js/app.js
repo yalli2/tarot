@@ -33,7 +33,7 @@ function numLabel(c){
 function cardFace(c,o={}){
   const rev=!!o.rev,cls=['tcard','has-img','suit-'+c.suit,o.size||'',rev?'is-rev':'',o.cls||''].join(' ');
   return `<div class="${cls}" style="--sc:${SUITS[c.suit].color}" ${o.id?`data-id="${c.id}"`:''}>
-    <img class="tc-img" src="img/cards/${c.id}.jpg" alt="${esc(c.ko)} (${esc(c.en)})${rev?' 역방향':''}" loading="lazy" decoding="async" draggable="false">
+    <img class="tc-img" src="img/cards/${c.id}.jpg?v=202610200351" alt="${esc(c.ko)} (${esc(c.en)})${rev?' 역방향':''}" loading="lazy" decoding="async" draggable="false">
     <div class="tc-cap"><span class="tc-num">${numLabel(c)}</span>${esc(c.ko)}</div>
     ${rev?'<span class="tc-badge">▼ 역방향</span>':''}
   </div>`;
