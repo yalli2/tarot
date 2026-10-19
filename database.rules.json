@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "sessions": {
+      "$session": {
+        "results": {
+          ".read": true,
+          "$id": {
+            ".write": "!data.exists()",
+            ".validate": "newData.hasChildren(['ts','nick','spread','cat','cards']) && newData.child('nick').isString() && newData.child('nick').val().length <= 16 && (!newData.hasChild('note') || newData.child('note').val().length <= 280)"
+          }
+        }
+      }
+    }
+  }
+}
